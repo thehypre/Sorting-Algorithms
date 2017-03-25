@@ -41,6 +41,6 @@ int main() {
     print(tableSelectionSorted, N);
     int *heapSortedTable = new int[N];
     tableEquals(heapSortedTable, table, N);
-    heapSort(heapSortedTable, 19);
+    heapSort(heapSortedTable, N);
     print(heapSortedTable, N);
 }
