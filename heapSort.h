@@ -29,7 +29,7 @@ void heapSort(int tab[], int N)
 {
     for (int i = (N/2) - 1; i >= 0; i--)
         heapify(tab, N, i);
-    for (int i = N-1; i >= 0; i--)
+    for (int i = N-1; i >=0; i--)
     {
         swap (tab[0], tab[i]);
         heapify(tab, i, 0);
