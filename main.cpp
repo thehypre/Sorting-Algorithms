@@ -6,6 +6,7 @@
 #include "selectionSort.h"
 #include "heapSort.h"
 #include "quickSort.h"
+#include "countingSort.h"
 using namespace std;
 
 void tableEquals(int tab1[], int tab2[], int N)
@@ -24,6 +25,7 @@ void print(int table[], int size)
 }
 
 const int N = 20;
+const int N2 = 8;
 
 int main() {
     int table[N] = {67, 3, 832, 38, 81, 93, 128, 4, 18, 4, 15, 912, 127, 95, 11, 53, 339 ,138, 193, 130};
@@ -54,4 +56,14 @@ int main() {
     quickSort(quickSortedTable, 0, N-1);
     cout << "Test quicksort" << endl;
     print(quickSortedTable, N);
+
+    //Now we create array of numbers from 1 to 9 for the purpose of counting sort
+    int table_c[N2] = {1, 7, 0, 3, 8, 5, 2, 5};
+    int *tableCountingSorted = new int [N2];
+    tableEquals(tableCountingSorted, table_c, N2);
+    cout << "Table to sort by counting sort" << endl;
+    print(table_c, N2);
+    countingSort(tableCountingSorted, N2, 9);
+    cout << "Test counting sort" << endl;
+    print(tableCountingSorted, N2);
 }
